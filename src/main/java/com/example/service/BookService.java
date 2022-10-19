@@ -67,4 +67,8 @@ public class BookService {
 			throw new RuntimeException(e);
 		}
 	}
+
+	public Book selectById(Integer id) {
+		return bookMapper.selectByPrimaryKey(id);
+	}
 }

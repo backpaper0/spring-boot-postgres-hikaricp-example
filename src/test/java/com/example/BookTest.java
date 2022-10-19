@@ -10,12 +10,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DataAccessResourceFailureException;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.transaction.TransactionTimedOutException;
 
 import com.example.generated.model.Book;
 import com.example.service.BookService;
 
 @SpringBootTest
+@ActiveProfiles("timeout")
 public class BookTest {
 
 	@Autowired
